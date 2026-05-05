@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Postal2Cheats")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+88100c9cee603b4ecedeca258e7ed96ec3284c87")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e2619de3e587ef8f7b5822fef76017b0ecc0ffb3")]
 [assembly: System.Reflection.AssemblyProductAttribute("Postal2Cheats")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Postal2Cheats")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
