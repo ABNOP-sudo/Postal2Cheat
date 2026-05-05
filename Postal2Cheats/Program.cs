@@ -3,8 +3,16 @@ using Swed32;
 using System.Threading;
 
 Console.WriteLine("Capturing the game process...");
-
-Swed swed = new Swed("Postal2");
+Swed swed;
+try
+{
+    swed = new Swed("Postal2");
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Failed to capture the game process: {ex.Message}");
+    return;
+}
 IntPtr moduleBase = swed.GetModuleBase("Postal2.exe");
 IntPtr engineBase = swed.GetModuleBase("Engine.dll");
 
@@ -25,4 +33,11 @@ while (true)
     {
         swed.WriteInt(M16A2AmmoAddress, 9999);
     }
+    if (renderer.teleportUpBool)
+    {
+        int currentY = swed.ReadInt(YAxisAddress);
+        swed.WriteInt(YAxisAddress, currentY + renderer.teleportHeight);
+        renderer.teleportUpBool = false;
+    }
+    Thread.Sleep(16);
 }
